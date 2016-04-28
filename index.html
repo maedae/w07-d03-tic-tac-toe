@@ -9,54 +9,50 @@
   <div class="container">
     <h1>Tic Tac Toe</h1>
 
-    <div class="reset-container">
-      <a href="#" class="reset-button" id="reset-button">Reset</a>
-    </div>
-
     <div class="player-scores-container">
       <!-- scores a dummy scores for output display purposes, rather than the
       actual starting scores -->
-      <p class="score">Player X Score: <span id="x-score">3</span></p>
-      <p class="score">Player O Score: <span id="o-score">2</span></p>
+      <p class="score">Player X Score: <span id="x-score">0</span></p>
+      <p class="score">Player O Score: <span id="o-score">0</span></p>
     </div>
 
     <div class="message-container">
-      <div id="player-x-ready" class="visible">
-        <p class="ready-message">Player X, it's your move!</p>
+      <div id="player-x-ready" class="ready-message">
+        <p>Player X, it's your move!</p>
       </div>
-      <div id="player-o-ready" class="hidden">
-        <p class="ready-message">Player O, it's your move!</p>
+      <div id="player-o-ready" class="ready-message hidden">
+        <p>Player O, it's your move!</p>
       </div>
-      <div id="player-x-wins" class="hidden">
+      <div id="player-x-wins" class="hidden victoryMessage">
         <p class="outcome-message">Player X wins!</p>
-        <p class="new-game" id="new-game-prompt">Play again?</p>
+        <p class="new-game" id="new-game-prompt"><label>Play again?</label></p>
       </div>
-      <div id="player-o-wins" class="hidden">
+      <div id="player-o-wins" class="hidden victoryMessage">
         <p class="outcome-message">Player O wins!</p>
-        <p class="new-game" id="new-game-prompt">Play again?</p>
+        <p class="new-game" id="new-game-prompt"><label>Play again?</label></p>
       </div>
-      <div id="tie-game" class="hidden">
+      <div id="tie-game" class="hidden victoryMessage">
         <p class="outcome-message">Cat's game! Nobody wins!</p>
-        <p class="new-game" id="new-game-prompt">Play again?</p>
+        <p class="new-game" id="new-game-prompt"><label>Play again?</label></p>
       </div>
     </div>
 
     <div class="board-container">
       <table class="board" id="game-board">
         <tr>
-          <td class="board-tile row-1 col-1" id="tile-1-1">1</td>
-          <td class="board-tile row-1 col-2" id="tile-1-2">2</td>
-          <td class="board-tile row-1 col-3" id="tile-1-3">3</td>
+          <td class="board-tile row-1 col-1 winTopHorizontal" id="tile-1-1"><label></label></td>
+          <td class="board-tile row-1 col-2 winTopHorizontal" id="tile-1-2"><label></label></td>
+          <td class="board-tile row-1 col-3 winTopHorizontal" id="tile-1-3"><label></label></td>
         </tr>
         <tr>
-          <td class="board-tile row-2 col-1" id="tile-2-1">4</td>
-          <td class="board-tile row-2 col-2" id="tile-2-2">5</td>
-          <td class="board-tile row-2 col-3" id="tile-2-3">6</td>
+          <td class="board-tile row-2 col-1" id="tile-2-1"><label></label></td>
+          <td class="board-tile row-2 col-2" id="tile-2-2"><label></label></td>
+          <td class="board-tile row-2 col-3" id="tile-2-3"><label></label></td>
         </tr>
         <tr>
-          <td class="board-tile row-3 col-1" id="tile-3-1">7</td>
-          <td class="board-tile row-3 col-2" id="tile-3-2">8</td>
-          <td class="board-tile row-3 col-3" id="tile-3-3">9</td>
+          <td class="board-tile row-3 col-1" id="tile-3-1"><label></label></td>
+          <td class="board-tile row-3 col-2" id="tile-3-2"><label></label></td>
+          <td class="board-tile row-3 col-3" id="tile-3-3"><label></label></td>
         </tr>
       </table>
     </div>
@@ -64,15 +60,6 @@
     <div class="game-log-container">
       <h2 class="game-log-header">Game Log</h2>
       <ol class="game-log-list" id="game-log">
-        <!-- dummy data -->
-        <li class="game-log-item">Player X won.</li>
-        <li class="game-log-item">Player X won.</li>
-        <li class="game-log-item">Cat's game (tie)</li>
-        <li class="game-log-item">Player X won.</li>
-        <li class="game-log-item">Cat's game (tie)</li>
-        <li class="game-log-item">Player O won</li>
-        <li class="game-log-item">Cat's game (tie)</li>
-        <li class="game-log-item">Player O won</li>
       </ol>
     </div>
   </div>
