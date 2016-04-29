@@ -24,7 +24,6 @@ window.addEventListener("load", function() {
 	 ["tile-1-1", "tile-2-2", "tile-3-3"], // left diagonal
 	 ["tile-1-3", "tile-2-2", "tile-3-1"] // right diagonal
 	 ];
-
 	//FUNCTIONS
 	//----------------------------------
 
@@ -76,10 +75,10 @@ window.addEventListener("load", function() {
 	function determineWinnerOrTie(){
 		//checks to see if player 1 won 
 		if (winnerCheck(player1Moves) === true){
-			determineWinnerOutput(1, document.getElementById("player-x-wins"), document.getElementById("x-score").innerHTML, player1Wins);			
+			determineWinnerOutput(1, document.getElementById("player-x-wins"), document.getElementById("x-score"), player1Wins);			
 		//checks to see if player2 won if player1 did not win
 		} else if (winnerCheck(player2Moves) === true){
-			determineWinnerOutput(2, document.getElementById("player-o-wins"), document.getElementById("o-score").innerHTML, player2Wins);	
+			determineWinnerOutput(2, document.getElementById("player-o-wins"), document.getElementById("o-score"), player2Wins);	
 		//checks to see if players have done all possible moves without declaring a winner. if both conditions are met, the program identifies a tied game
 		} else if (currentMove >= totalMoves && playerWon === 0){
 			determineWinnerOutput(0, document.getElementById("tie-game"), false, false);	
@@ -90,7 +89,7 @@ window.addEventListener("load", function() {
 		hideAllReadyMessages() 
 		playerWon = playerWonValue;
 		winMessage.classList.remove("hidden");
-		winnerScore = ++winCounter;
+		winnerScore.innerHTML = ++winCounter;
 		updateGameLog();
 	}
 	//function updates HTML node containing records of previous game outcomes
